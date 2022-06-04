@@ -1,0 +1,137 @@
+.parent {
+  background: #eaeaea;
+  padding: 16px;
+  max-width: 680px;
+  margin: 10px auto;
+}
+.child1 {
+  padding: 20px;
+  background: #d4ecd8;
+}
+.child2 {
+  padding: 20px;
+  margin-top: 10px;
+  background: #f0bfbf;
+}
+.conponemtName {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.parent .conponemtName {
+  color: #747474;
+}
+.child1 .conponemtName {
+  color: #468d49;
+}
+.child2 .conponemtName {
+  color: #973482;
+}
+
+select {
+  width: 100%;
+  padding: 1em 1em;
+  cursor: pointer;
+  font-size: 16px;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+.selectItem {
+  position: relative;
+}
+.selectItem::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: "";
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #666666;
+  pointer-events: none;
+}
+
+label {
+  display: block;
+}
+input[type="radio"] {
+  appearance: none;
+  display: none;
+  opacity: 0;
+  width: 1px;
+  position: absolute;
+  height: 1px;
+}
+input[type="radio"] + span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 10px 11px 8px 36px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+input[type="radio"] + span::before,
+input[type="radio"] + span::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px auto 0;
+  box-sizing: border-box;
+}
+input[type="radio"] + span::before {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #999999;
+  left: 9px;
+}
+input[type="radio"] + span::after {
+  width: 10px;
+  height: 10px;
+  background: #999999;
+  left: 14px;
+  opacity: 0;
+}
+input[type="radio"]:checked + span::before {
+  border: 2px solid #0070bd;
+}
+input[type="radio"]:checked + span::after {
+  background: #0070bd;
+  opacity: 1;
+}
+
+@media (max-width: 650px) {
+  input[type="radio"] + span {
+    padding: 10px 11px 8px 36px;
+  }
+}
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #c71313;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 30px auto 0;
+  display: block;
+  cursor: pointer;
+}
